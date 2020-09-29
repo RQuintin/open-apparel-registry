@@ -18,8 +18,10 @@ RUN GOOGLE_SERVER_SIDE_API_KEY="" \
     OAR_CLIENT_KEY="" \
     python manage.py collectstatic --no-input
 
+## TODO: Decide if we want to run with 2 workers in our Fargate deployment
+## environment with the GazetteerCache
 CMD ["-b :8080", \
-"--workers=2", \
+"--workers=1", \
 "--timeout=180", \
 "--access-logfile=-", \
 "--access-logformat=%({X-Forwarded-For}i)s %(h)s %(l)s %(u)s %(t)s \"%(r)s\" %(s)s %(b)s \"%(f)s\" \"%(a)s\"", \
