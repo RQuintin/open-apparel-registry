@@ -39,6 +39,7 @@ services:
     command:
         - '-b :8081'
         - '--reload'
+        - '--timeout=180'
         - '--access-logfile=-'
         - '--error-logfile=-'
         - '--log-level=debug'

@@ -20,7 +20,7 @@ RUN GOOGLE_SERVER_SIDE_API_KEY="" \
 
 CMD ["-b :8080", \
 "--workers=2", \
-"--timeout=60", \
+"--timeout=180", \
 "--access-logfile=-", \
 "--access-logformat=%({X-Forwarded-For}i)s %(h)s %(l)s %(u)s %(t)s \"%(r)s\" %(s)s %(b)s \"%(f)s\" \"%(a)s\"", \
 "--error-logfile=-", \
