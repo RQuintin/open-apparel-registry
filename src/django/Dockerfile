@@ -22,7 +22,7 @@ RUN GOOGLE_SERVER_SIDE_API_KEY="" \
 ## environment with the GazetteerCache
 CMD ["-b :8080", \
 "--workers=1", \
-"--timeout=180", \
+"--timeout=60", \
 "--access-logfile=-", \
 "--access-logformat=%({X-Forwarded-For}i)s %(h)s %(l)s %(u)s %(t)s \"%(r)s\" %(s)s %(b)s \"%(f)s\" \"%(a)s\"", \
 "--error-logfile=-", \
