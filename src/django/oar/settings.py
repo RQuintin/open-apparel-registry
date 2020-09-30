@@ -292,7 +292,7 @@ STATICFILES_STORAGE = 'spa.storage.SPAStaticFilesStorage'
 WATCHMAN_ERROR_CODE = 503
 WATCHMAN_CHECKS = (
     'watchman.checks.databases',
-    'api.checks.gazetteercache'
+    # 'api.checks.gazetteercache'
 )
 
 # django-ecsmanage
