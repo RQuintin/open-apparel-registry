@@ -100,7 +100,7 @@ data "template_file" "app" {
   template = "${file("task-definitions/app.json")}"
 
   vars = {
-    image  = "${local.app_image}"
+    image = "${local.app_image}"
 
     postgres_host     = "${aws_route53_record.database.name}"
     postgres_port     = "${module.database_enc.port}"
@@ -153,7 +153,7 @@ data "template_file" "app_cli" {
   template = "${file("task-definitions/app_cli.json")}"
 
   vars = {
-    image  = "${local.app_image}"
+    image = "${local.app_image}"
 
     postgres_host     = "${aws_route53_record.database.name}"
     postgres_port     = "${module.database_enc.port}"
